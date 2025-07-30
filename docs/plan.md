@@ -30,6 +30,7 @@
 - [x] Improve footer. Making it smaller
 - [ ] Add certificates part
 - [ ] Add Eductaion followed
+- [ ] Add dutch langauge option
 
 ## Progress
 - ✅ Created complete Vue.js project structure with Vite
