@@ -192,13 +192,16 @@ export default {
   },
   mounted() {
     this.setupScrollEffects()
-    this.setupIntersectionObserver()
     if (this.useTypewriter) {
       this.startTypewriterAnimation()
     } else {
       this.displayedName = this.fullName
       this.displayedSubtitle = this.fullSubtitle
     }
+    // Setup intersection observer after a delay to ensure DOM is ready
+    setTimeout(() => {
+      this.setupIntersectionObserver()
+    }, 1000)
   },
   methods: {
     scrollTo(elementId) {
@@ -209,10 +212,14 @@ export default {
     },
 
     setupScrollEffects() {
-      window.addEventListener('scroll', () => {
-        this.isScrolled = window.scrollY > 100
+      this.handleScroll = () => {
+        const scrollY = window.scrollY
+        const wasScrolled = this.isScrolled
+        this.isScrolled = scrollY > 100
+        console.log('Scroll event:', { scrollY, wasScrolled, isScrolled: this.isScrolled })
         this.updateActiveSection()
-      })
+      }
+      window.addEventListener('scroll', this.handleScroll)
     },
 
     updateActiveSection() {
@@ -304,16 +311,10 @@ export default {
     }
   },
 
-  mounted() {
-    this.startTypewriterAnimation()
-    // Setup intersection observer after a delay to ensure DOM is ready
-    setTimeout(() => {
-      this.setupIntersectionObserver()
-    }, 1000)
-  },
-
   beforeUnmount() {
-    window.removeEventListener('scroll', this.setupScrollEffects)
+    if (this.handleScroll) {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 }
 </script>
