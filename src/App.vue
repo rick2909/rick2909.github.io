@@ -4,12 +4,12 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <h1>Rick van Nieuwland</h1>
-          <p class="subtitle">C# & Unity Developer</p>
-          <p class="description">
+          <h1 :class="{ typewriter: useTypewriter }" ref="nameElement">{{ displayedName }}</h1>
+          <p class="subtitle" :class="{ typewriter: useTypewriter }" ref="subtitleElement">{{ displayedSubtitle }}</p>
+          <p class="description" :class="{ 'fade-in': useTypewriter }">
             Crafting robust applications and immersive gaming experiences with passion for clean code and innovative solutions.
           </p>
-          <div class="cta-buttons">
+          <div class="cta-buttons" :class="{ 'fade-in': useTypewriter }">
             <a href="#projects" @click="scrollTo('projects')" class="btn btn-primary">
               <i class="fas fa-code"></i>
               View My Work
@@ -161,12 +161,25 @@ export default {
       csharpProjects: projectsData.csharp,
       unityProjects: projectsData.unity,
       isScrolled: false,
-      activeSection: 'about'
+      activeSection: 'about',
+      useTypewriter: true,
+      displayedName: '',
+      displayedSubtitle: '',
+      fullName: 'Rick van Nieuwland',
+      fullSubtitle: 'C# & Unity Developer',
+      nameTypingComplete: false,
+      subtitleTypingComplete: false
     }
   },
   mounted() {
     this.setupScrollEffects()
     this.setupIntersectionObserver()
+    if (this.useTypewriter) {
+      this.startTypewriterAnimation()
+    } else {
+      this.displayedName = this.fullName
+      this.displayedSubtitle = this.fullSubtitle
+    }
   },
   methods: {
     scrollTo(elementId) {
@@ -221,6 +234,41 @@ export default {
         const animatedElements = document.querySelectorAll('.animate-on-scroll')
         animatedElements.forEach((el) => observer.observe(el))
       })
+    },
+    
+    startTypewriterAnimation() {
+      // Start typing the name after a short delay
+      setTimeout(() => {
+        this.typeText(this.fullName, 'displayedName', 50, () => {
+          this.nameTypingComplete = true
+          if (this.$refs.nameElement) {
+            this.$refs.nameElement.classList.add('typing-complete')
+          }
+          
+          // Start typing subtitle after name is complete
+          setTimeout(() => {
+            this.typeText(this.fullSubtitle, 'displayedSubtitle', 40, () => {
+              this.subtitleTypingComplete = true
+              if (this.$refs.subtitleElement) {
+                this.$refs.subtitleElement.classList.add('typing-complete')
+              }
+            })
+          }, 200)
+        })
+      }, 250)
+    },
+    
+    typeText(text, targetProperty, speed, callback) {
+      let index = 0
+      const typeInterval = setInterval(() => {
+        if (index < text.length) {
+          this[targetProperty] = text.substring(0, index + 1)
+          index++
+        } else {
+          clearInterval(typeInterval)
+          if (callback) callback()
+        }
+      }, speed)
     }
   },
   
