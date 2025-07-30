@@ -26,6 +26,10 @@
 - [x] Add sophisticated animations and transitions
 - [x] Enhance visual effects and interactions
 - [x] Add typewriter animation effect to header text
+- [x] Settup Skills and Technolgies I know and have use(d)
+- [x] Improve footer. Making it smaller
+- [ ] Add certificates part
+- [ ] Add Eductaion followed
 
 ## Progress
 - ✅ Created complete Vue.js project structure with Vite

@@ -128,17 +128,20 @@
               <li>Physics & Animation</li>
               <li>UI/UX Design</li>
               <li>Performance Optimization</li>
+              <li>Virtual reality</li>
             </ul>
           </div>
           <div class="skill-category">
             <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
             <ul>
-              <li>Visual Studio</li>
-              <li>Git & GitHub</li>
+              <li>Visual Studio (Code)</li>
+              <li>JetBrain Rider</li>
+              <li>Git & GitHub & GitLab</li>
               <li>SQL Server</li>
               <li>REST APIs</li>
               <li>Azure</li>
               <li>Docker</li>
+              <li>GitHub Copilot & Windsurf</li>
             </ul>
           </div>
         </div>
@@ -149,18 +152,18 @@
     <footer id="contact" class="footer">
       <div class="container">
         <h2 style="margin-bottom: 2rem;">Get In Touch</h2>
-        <div class="social-links">
-          <a href="https://github.com/rick2909" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/rick2909" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="mailto:your.email@example.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-        <p>&copy; 2024 Rick2909. All rights reserved.</p>
+          <div class="social-links">
+            <a href="https://github.com/rick2909" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rick-van-nieuwland/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:rick29998@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        <p>&copy; {{ currentYear }} Rick van Nieuwland. All rights reserved.</p>
       </div>
     </footer>
   </div>
@@ -168,152 +171,18 @@
 
 <script>
 import ProjectCard from './components/ProjectCard.vue'
-import projectsData from './data/projects.json'
+import { usePortfolio } from './composables/usePortfolio.js'
 
 export default {
   name: 'App',
   components: {
     ProjectCard
   },
-  data() {
+  setup() {
+    const portfolio = usePortfolio()
+    
     return {
-      csharpProjects: projectsData.csharp,
-      unityProjects: projectsData.unity,
-      isScrolled: false,
-      activeSection: 'about',
-      useTypewriter: true,
-      displayedName: '',
-      displayedSubtitle: '',
-      fullName: 'Rick van Nieuwland',
-      fullSubtitle: 'C# & Unity Developer',
-      nameTypingComplete: false,
-      subtitleTypingComplete: false
-    }
-  },
-  mounted() {
-    this.setupScrollEffects()
-    if (this.useTypewriter) {
-      this.startTypewriterAnimation()
-    } else {
-      this.displayedName = this.fullName
-      this.displayedSubtitle = this.fullSubtitle
-    }
-    // Setup intersection observer after a delay to ensure DOM is ready
-    setTimeout(() => {
-      this.setupIntersectionObserver()
-    }, 1000)
-  },
-  methods: {
-    scrollTo(elementId) {
-      const element = document.getElementById(elementId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    },
-
-    setupScrollEffects() {
-      this.handleScroll = () => {
-        const scrollY = window.scrollY
-        const wasScrolled = this.isScrolled
-        this.isScrolled = scrollY > 100
-        console.log('Scroll event:', { scrollY, wasScrolled, isScrolled: this.isScrolled })
-        this.updateActiveSection()
-      }
-      window.addEventListener('scroll', this.handleScroll)
-    },
-
-    updateActiveSection() {
-      const sections = ['about', 'projects', 'skills', 'contact']
-      const scrollPosition = window.scrollY + 200
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const offsetTop = element.offsetTop
-          const offsetBottom = offsetTop + element.offsetHeight
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            this.activeSection = section
-            break
-          }
-        }
-      }
-    },
-
-    setupIntersectionObserver() {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Add a small delay for better visual effect
-              setTimeout(() => {
-                entry.target.classList.add('animated')
-                // Clear inline styles to let CSS take over
-                entry.target.style.opacity = ''
-                entry.target.style.transform = ''
-              }, 100)
-              // Stop observing once animated to prevent re-triggering
-              observer.unobserve(entry.target)
-            }
-          })
-        },
-        {
-          threshold: 0.2,
-          rootMargin: '0px 0px -100px 0px'
-        }
-      )
-
-      // Observe all elements with animate-on-scroll class
-      // Immediately find and reset all animated elements
-      const animatedElements = document.querySelectorAll('.animate-on-scroll')
-      animatedElements.forEach((el) => {
-        // Force remove animated class and ensure hidden state
-        el.classList.remove('animated')
-        el.style.opacity = '0'
-        el.style.transform = 'translateY(30px)'
-        observer.observe(el)
-      })
-    },
-
-    startTypewriterAnimation() {
-      // Start typing the name after a short delay
-      setTimeout(() => {
-        this.typeText(this.fullName, 'displayedName', 50, () => {
-          this.nameTypingComplete = true
-          if (this.$refs.nameElement) {
-            this.$refs.nameElement.classList.add('typing-complete')
-          }
-
-          // Start typing subtitle after name is complete
-          setTimeout(() => {
-            this.typeText(this.fullSubtitle, 'displayedSubtitle', 40, () => {
-              this.subtitleTypingComplete = true
-              if (this.$refs.subtitleElement) {
-                this.$refs.subtitleElement.classList.add('typing-complete')
-              }
-            })
-          }, 200)
-        })
-      }, 250)
-    },
-
-    typeText(text, targetProperty, speed, callback) {
-      let index = 0
-      const typeInterval = setInterval(() => {
-        if (index < text.length) {
-          this[targetProperty] = text.substring(0, index + 1)
-          index++
-        } else {
-          clearInterval(typeInterval)
-          if (callback) callback()
-        }
-      }, speed)
-    }
-  },
-
-  beforeUnmount() {
-    if (this.handleScroll) {
-      window.removeEventListener('scroll', this.handleScroll)
+      ...portfolio
     }
   }
 }

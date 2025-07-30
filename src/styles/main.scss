@@ -519,19 +519,19 @@ body {
 // Footer
 .footer {
   background: $secondary-bg;
-  padding: $spacing-3xl 0;
+  padding: $spacing-xl 0;
   text-align: center;
   border-top: 1px solid $border-color;
   
   h2 {
-    margin-bottom: $spacing-2xl;
+    margin-bottom: $spacing-lg;
   }
   
   .social-links {
     display: flex;
     justify-content: center;
-    gap: $spacing-xl;
-    margin-bottom: $spacing-xl;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
     
     a {
       color: $secondary-text;
