@@ -1,60 +1,48 @@
 {
   "csharp": [
     {
-      "id": 1,
-      "title": "Task Management API",
-      "description": "A RESTful API built with ASP.NET Core for managing tasks and projects. Features JWT authentication, Entity Framework integration, and comprehensive CRUD operations.",
-      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "JWT", "Swagger"],
-      "github": "https://github.com/rick2909/task-management-api",
-      "demo": null,
-      "download": null
-    },
-    {
-      "id": 2,
-      "title": "E-Commerce Desktop App",
-      "description": "A Windows Forms application for small business inventory management. Includes product catalog, order processing, and sales reporting with local database storage.",
-      "technologies": ["C#", "Windows Forms", ".NET Framework", "SQLite", "Crystal Reports"],
-      "github": "https://github.com/rick2909/ecommerce-desktop",
-      "demo": null,
-      "download": "https://github.com/rick2909/ecommerce-desktop/releases"
-    },
-    {
-      "id": 3,
-      "title": "Weather Monitoring Service",
-      "description": "A background Windows service that monitors weather data from multiple APIs and sends alerts. Built with .NET Core and hosted as a Windows Service.",
-      "technologies": ["C#", ".NET Core", "Windows Service", "HTTP Client", "JSON", "Logging"],
-      "github": "https://github.com/rick2909/weather-monitor",
+      "title": "SoMedia",
+      "description": "Developed a LinkedIn-style web application within a multidisciplinary Scrum team. Responsible for setting up RESTful APIs, implementing business logic, and handling database interactions using Entity Framework and LINQ.",
+      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum"],
+      "github": null,
       "demo": null,
       "download": null
     }
   ],
   "unity": [
     {
-      "id": 4,
-      "title": "2D Platformer Adventure",
-      "description": "A classic 2D platformer game with multiple levels, collectibles, and enemy AI. Features smooth character movement, particle effects, and dynamic audio system.",
-      "technologies": ["Unity", "C#", "2D Physics", "Animation", "Audio", "UI"],
-      "github": "https://github.com/rick2909/2d-platformer",
-      "demo": "https://rick2909.itch.io/platformer-adventure",
-      "download": null
-    },
-    {
-      "id": 5,
-      "title": "3D Puzzle Game",
-      "description": "An immersive 3D puzzle game where players manipulate objects in space to solve increasingly complex challenges. Features dynamic lighting and physics-based interactions.",
-      "technologies": ["Unity", "C#", "3D Graphics", "Physics", "Lighting", "Post-Processing"],
-      "github": "https://github.com/rick2909/3d-puzzle-game",
-      "demo": "https://rick2909.itch.io/puzzle-master",
-      "download": null
-    },
-    {
-      "id": 6,
-      "title": "Mobile Runner Game",
-      "description": "An endless runner game optimized for mobile devices. Features procedural level generation, power-ups, and social leaderboards integration.",
-      "technologies": ["Unity", "C#", "Mobile", "Procedural Generation", "UI/UX", "Analytics"],
-      "github": "https://github.com/rick2909/mobile-runner",
+      "title": "Simple VR Flight sim",
+      "description": "A simplified flight simulator built in Unity for ING events. Included a partial recreation of the Bijlmer area and full documentation via a Game Design Document.",
+      "technologies": ["Unity", "C#", "VR", "Git", "GitHub", "Game Design", "Bijlmer environment"],
+      "github": "https://github.com/rick2909/ING-Air-racing",
       "demo": null,
-      "download": "https://play.google.com/store/apps/details?id=com.rick2909.runner"
+      "download": null
+    },
+    {
+      "title": "VR Communication Training for Pilots",
+      "description": "A VR training application for pilots on the Meta Quest, replacing a desktop version. Included 3D characters with emotional expressions and a virtual cabin with responsive passengers. Used Photon for multiplayer interaction and optimized for performance.",
+      "technologies": ["Unity", "C#", "VR", "Photon", "Git", "GitHub", "3D Characters", "Meta Quest"],
+      "github": null,
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "VR Type Training Embraer E-jets",
+      "description": "Developed a 3D character with inverse kinematics for a VR application to help pilots prepare for type training. Worked in multiple Scrum sprints and delivered a configurable model capable of accurately interacting with cockpit buttons.",
+      "technologies": ["Unity", "C#", "VR", "Inverse Kinematics", "Scrum", "Git"],
+      "github": null,
+      "demo": null,
+      "download": null
+    }
+  ],
+  "laravel": [
+    {
+      "title": "POS4 Kassasoftware Web Interface",
+      "description": "During an internship, independently developed a complete web interface using Laravel, including database setup via migrations and automated testing with Laravel Dusk.",
+      "technologies": ["Laravel", "PHP", "JavaScript", "Node.js", "Git", "GitHub", "Laravel Dusk"],
+      "github": null,
+      "demo": null,
+      "download": null
     }
   ]
 }

@@ -84,7 +84,7 @@
         <div class="projects-grid">
           <ProjectCard
             v-for="project in csharpProjects"
-            :key="project.id"
+            :key="project.title"
             :project="project"
             class="animate-on-scroll"
           />
@@ -95,7 +95,7 @@
         <div class="projects-grid">
           <ProjectCard
             v-for="project in unityProjects"
-            :key="project.id"
+            :key="project.title"
             :project="project"
             class="animate-on-scroll"
           />
