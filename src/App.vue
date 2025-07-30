@@ -56,12 +56,19 @@
         <h2>About Me</h2>
         <div class="about-content">
           <p>
-            I'm a passionate C# developer with expertise in .NET frameworks and Unity game development.
-            I love creating robust applications and immersive gaming experiences that solve real-world problems.
+            I'm an enthusiastic C# developer with a keen eye for detail and a passion for building smart, scalable solutions. 
+            Programming feels like solving a well-crafted puzzle to me. 
+            I dive into problems, discover patterns, and build something elegant and functional step by step.
           </p>
           <p>
-            With a strong foundation in object-oriented programming and software architecture,
-            I continuously explore new technologies and best practices to deliver high-quality solutions.
+            With my analytical mindset, creative approach, and team spirit, I bring value to every development team. 
+            I build robust web applications with .NET and create engaging experiences in Unity, always focusing on 
+            clean, readable code and clear documentation.
+          </p>
+          <p>
+            Beyond coding, I'm a lifelong learner who stays current through courses and conferences. When I'm not developing, 
+            you'll find me gaming, watching movies in the cinema, or exploring new technologies. I'm also passionate about aviation and skiing, 
+            bringing that same curiosity and energy to every project I work on.
           </p>
         </div>
       </div>
@@ -107,7 +114,7 @@
               <li>C# Programming</li>
               <li>.NET Framework</li>
               <li>.NET Core</li>
-              <li>ASP.NET MVC</li>
+              <li>.NET MVC</li>
               <li>Entity Framework</li>
               <li>LINQ</li>
             </ul>
@@ -231,20 +238,33 @@ export default {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('animated')
+              // Add a small delay for better visual effect
+              setTimeout(() => {
+                entry.target.classList.add('animated')
+                // Clear inline styles to let CSS take over
+                entry.target.style.opacity = ''
+                entry.target.style.transform = ''
+              }, 100)
+              // Stop observing once animated to prevent re-triggering
+              observer.unobserve(entry.target)
             }
           })
         },
         {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
+          threshold: 0.2,
+          rootMargin: '0px 0px -100px 0px'
         }
       )
 
       // Observe all elements with animate-on-scroll class
-      this.$nextTick(() => {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll')
-        animatedElements.forEach((el) => observer.observe(el))
+      // Immediately find and reset all animated elements
+      const animatedElements = document.querySelectorAll('.animate-on-scroll')
+      animatedElements.forEach((el) => {
+        // Force remove animated class and ensure hidden state
+        el.classList.remove('animated')
+        el.style.opacity = '0'
+        el.style.transform = 'translateY(30px)'
+        observer.observe(el)
       })
     },
 
@@ -282,6 +302,14 @@ export default {
         }
       }, speed)
     }
+  },
+
+  mounted() {
+    this.startTypewriterAnimation()
+    // Setup intersection observer after a delay to ensure DOM is ready
+    setTimeout(() => {
+      this.setupIntersectionObserver()
+    }, 1000)
   },
 
   beforeUnmount() {
