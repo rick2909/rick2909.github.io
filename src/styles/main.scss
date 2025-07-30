@@ -196,7 +196,11 @@ body {
   z-index: $z-sticky;
   padding: $spacing-lg 0;
   transition: all $transition-normal;
-  
+
+  @include mobile {
+    padding: $spacing-md;
+  }
+
   &.scrolled {
     @include glass-effect;
     padding: $spacing-md 0;
@@ -209,8 +213,8 @@ body {
     gap: $spacing-2xl;
     
     @include mobile {
-      gap: $spacing-lg;
-      flex-wrap: wrap;
+      gap: $spacing-md;
+      justify-content: center;
     }
   }
   
@@ -218,27 +222,50 @@ body {
     color: $secondary-text;
     text-decoration: none;
     font-weight: $font-weight-medium;
-    padding: $spacing-sm $spacing-md;
+    padding: $spacing-md $spacing-lg;
     border-radius: $radius-md;
     transition: all $transition-normal;
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    
+    @include mobile {
+      padding: $spacing-md;
+      justify-content: center;
+      min-width: 48px; // Minimum touch target size
+    }
+    
+    i {
+      font-size: $font-size-base;
+      
+      @include mobile {
+        font-size: $font-size-xl;
+      }
+    }
+    
+    .nav-text {
+      @include mobile {
+        display: none;
+      }
+    }
     
     &::before {
       content: '';
       position: absolute;
       bottom: -2px;
-      left: 0;
+      left: 50%;
       width: 0;
       height: 2px;
       background: $accent-gradient;
-      transition: width $transition-normal;
+      transition: all $transition-normal;
+      transform: translateX(-50%);
     }
     
     &:hover {
       color: $accent-color;
       
       &::before {
-        width: 100%;
+        width: 80%;
       }
     }
     

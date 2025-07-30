@@ -30,10 +30,22 @@
     <nav class="nav" :class="{ scrolled: isScrolled }">
       <div class="container">
         <ul>
-          <li><a href="#about" @click="scrollTo('about')" :class="{ active: activeSection === 'about' }">About</a></li>
-          <li><a href="#projects" @click="scrollTo('projects')" :class="{ active: activeSection === 'projects' }">Projects</a></li>
-          <li><a href="#skills" @click="scrollTo('skills')" :class="{ active: activeSection === 'skills' }">Skills</a></li>
-          <li><a href="#contact" @click="scrollTo('contact')" :class="{ active: activeSection === 'contact' }">Contact</a></li>
+          <li><a href="#about" @click="scrollTo('about')" :class="{ active: activeSection === 'about' }">
+            <i class="fas fa-user"></i>
+            <span class="nav-text">About</span>
+          </a></li>
+          <li><a href="#projects" @click="scrollTo('projects')" :class="{ active: activeSection === 'projects' }">
+            <i class="fas fa-code"></i>
+            <span class="nav-text">Projects</span>
+          </a></li>
+          <li><a href="#skills" @click="scrollTo('skills')" :class="{ active: activeSection === 'skills' }">
+            <i class="fas fa-cogs"></i>
+            <span class="nav-text">Skills</span>
+          </a></li>
+          <li><a href="#contact" @click="scrollTo('contact')" :class="{ active: activeSection === 'contact' }">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-text">Contact</span>
+          </a></li>
         </ul>
       </div>
     </nav>
