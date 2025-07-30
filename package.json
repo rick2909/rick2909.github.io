@@ -1,0 +1,24 @@
+{
+  "name": "rick2909-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website showcasing C# and Unity projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "gh-pages": "^5.0.0",
+    "sass": "^1.69.5",
+    "vite": "^4.4.5"
+  },
+  "keywords": ["portfolio", "vue", "c#", "unity", "github-pages"],
+  "author": "Rick van Nieuwland",
+  "license": "MIT"
+}

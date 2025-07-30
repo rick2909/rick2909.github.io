@@ -1,0 +1,221 @@
+@import './variables.scss';
+
+// Responsive mixins
+@mixin mobile {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+// Animation mixins
+@mixin fade-in($duration: $transition-normal, $delay: 0s) {
+  opacity: 0;
+  animation: fadeIn $duration ease-out $delay forwards;
+}
+
+@mixin slide-up($duration: $transition-slow, $delay: 0s) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp $duration ease-out $delay forwards;
+}
+
+@mixin slide-in-left($duration: $transition-slow, $delay: 0s) {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft $duration ease-out $delay forwards;
+}
+
+@mixin slide-in-right($duration: $transition-slow, $delay: 0s) {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInRight $duration ease-out $delay forwards;
+}
+
+@mixin scale-in($duration: $transition-normal, $delay: 0s) {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn $duration ease-out $delay forwards;
+}
+
+@mixin glow-effect($color: $accent-color) {
+  box-shadow: 0 0 20px rgba($color, 0.3);
+  transition: box-shadow $transition-normal;
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba($color, 0.5);
+  }
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin gradient-text($gradient: $accent-gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin hover-lift {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-xl;
+  border: none;
+  border-radius: $radius-lg;
+  font-family: $font-primary;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+@mixin card-base {
+  background: $card-bg;
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+  padding: $spacing-xl;
+  transition: all $transition-normal;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $accent-gradient;
+    transform: scaleX(0);
+    transition: transform $transition-normal;
+  }
+  
+  &:hover {
+    border-color: $border-hover;
+    transform: translateY(-2px);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Keyframe animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
