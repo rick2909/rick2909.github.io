@@ -20,9 +20,9 @@
             </a>
           </div>
         </div>
-        <div class="scroll-indicator" @click="scrollTo('about')">
-          <i class="fas fa-chevron-down"></i>
-        </div>
+      </div>
+      <div class="scroll-indicator" @click="scrollTo('about')">
+        <i class="fas fa-chevron-down"></i>
       </div>
     </header>
 
@@ -44,11 +44,11 @@
         <h2>About Me</h2>
         <div class="about-content">
           <p>
-            I'm a passionate C# developer with expertise in .NET frameworks and Unity game development. 
+            I'm a passionate C# developer with expertise in .NET frameworks and Unity game development.
             I love creating robust applications and immersive gaming experiences that solve real-world problems.
           </p>
           <p>
-            With a strong foundation in object-oriented programming and software architecture, 
+            With a strong foundation in object-oriented programming and software architecture,
             I continuously explore new technologies and best practices to deliver high-quality solutions.
           </p>
         </div>
@@ -59,12 +59,12 @@
     <section id="projects" class="section projects-section">
       <div class="container">
         <h2>My Projects</h2>
-        
+
         <!-- C# Projects -->
         <h3 class="section-title">C# & .NET Projects</h3>
         <div class="projects-grid">
-          <ProjectCard 
-            v-for="project in csharpProjects" 
+          <ProjectCard
+            v-for="project in csharpProjects"
             :key="project.id"
             :project="project"
             class="animate-on-scroll"
@@ -74,8 +74,8 @@
         <!-- Unity Projects -->
         <h3 class="section-title">Unity Projects</h3>
         <div class="projects-grid">
-          <ProjectCard 
-            v-for="project in unityProjects" 
+          <ProjectCard
+            v-for="project in unityProjects"
             :key="project.id"
             :project="project"
             class="animate-on-scroll"
@@ -188,24 +188,24 @@ export default {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     },
-    
+
     setupScrollEffects() {
       window.addEventListener('scroll', () => {
         this.isScrolled = window.scrollY > 100
         this.updateActiveSection()
       })
     },
-    
+
     updateActiveSection() {
       const sections = ['about', 'projects', 'skills', 'contact']
       const scrollPosition = window.scrollY + 200
-      
+
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const offsetTop = element.offsetTop
           const offsetBottom = offsetTop + element.offsetHeight
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             this.activeSection = section
             break
@@ -213,7 +213,7 @@ export default {
         }
       }
     },
-    
+
     setupIntersectionObserver() {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -228,14 +228,14 @@ export default {
           rootMargin: '0px 0px -50px 0px'
         }
       )
-      
+
       // Observe all elements with animate-on-scroll class
       this.$nextTick(() => {
         const animatedElements = document.querySelectorAll('.animate-on-scroll')
         animatedElements.forEach((el) => observer.observe(el))
       })
     },
-    
+
     startTypewriterAnimation() {
       // Start typing the name after a short delay
       setTimeout(() => {
@@ -244,7 +244,7 @@ export default {
           if (this.$refs.nameElement) {
             this.$refs.nameElement.classList.add('typing-complete')
           }
-          
+
           // Start typing subtitle after name is complete
           setTimeout(() => {
             this.typeText(this.fullSubtitle, 'displayedSubtitle', 40, () => {
@@ -257,7 +257,7 @@ export default {
         })
       }, 250)
     },
-    
+
     typeText(text, targetProperty, speed, callback) {
       let index = 0
       const typeInterval = setInterval(() => {
@@ -271,7 +271,7 @@ export default {
       }, speed)
     }
   },
-  
+
   beforeUnmount() {
     window.removeEventListener('scroll', this.setupScrollEffects)
   }
