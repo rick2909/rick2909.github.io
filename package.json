@@ -1,6 +1,7 @@
 {
   "name": "rick2909-portfolio",
   "version": "1.0.0",
+  "type": "module",
   "description": "Portfolio website showcasing C# and Unity projects",
   "main": "index.js",
   "scripts": {
