@@ -3,8 +3,17 @@
     {
       "title": "SoMedia",
       "description": "Developed a LinkedIn-style web application within a multidisciplinary Scrum team. Responsible for setting up RESTful APIs, implementing business logic, and handling database interactions using Entity Framework and LINQ.",
-      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum"],
+      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum", "Git", "GitHub", "Azure"],
       "github": null,
+      "demo": null,
+      "download": null
+    }
+    ,
+    {
+      "title": "Budget Tracker (.NET)",
+      "description": "A personal finance management app built with ASP.NET Core and Entity Framework. Features include expense tracking, budget planning, and data visualization. Developed with a focus on clean architecture and modern .NET practices.",
+      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "MVC", "Finance"],
+      "github": "https://github.com/rick2909/Budget-Tracker-.NET",
       "demo": null,
       "download": null
     }
