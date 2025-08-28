@@ -12,8 +12,16 @@
     {
       "title": "Budget Tracker (.NET)",
       "description": "A personal finance management app built with ASP.NET Core and Entity Framework. Features include expense tracking, budget planning, and data visualization. Developed with a focus on clean architecture and modern .NET practices.",
-      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "MVC", "Finance"],
+      "technologies": ["C#", ".NET Core", "Entity Framework", "LINQ", "SQL Server", "MVC", "Finance"],
       "github": "https://github.com/rick2909/Budget-Tracker-.NET",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "FlightTracker",
+      "description": "A comprehensive flight tracking application built with Clean Architecture principles. Features domain entities for flights and airports, external API integrations (OpenSky, Aviationstack), and a foundation for real-time flight data processing with planned Blazor Web UI.",
+      "technologies": ["C#", ".NET 9", "Entity Framework Core", "Clean Architecture", "SQLite", "External APIs", "Blazor", "SignalR"],
+      "github": "https://github.com/rick2909/FlightTracker",
       "demo": null,
       "download": null
     }
