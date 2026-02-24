@@ -352,14 +352,17 @@ body {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: $spacing-2xl;
-  margin-top: $spacing-2xl;
+  column-count: 2;
+  column-gap: $spacing-xl;
+  margin-top: $spacing-xl;
   
   @include mobile {
-    grid-template-columns: 1fr;
-    gap: $spacing-xl;
+    column-count: 1;
+    column-gap: $spacing-lg;
+  }
+  
+  @media (max-width: 768px) {
+    column-count: 1;
   }
 }
 
@@ -367,6 +370,10 @@ body {
   @include card-base;
   @include hover-lift;
   @include slide-up(0.6s);
+  break-inside: avoid;
+  margin-bottom: $spacing-xl;
+  display: inline-block;
+  width: 100%;
   
   &:nth-child(even) {
     animation-delay: 0.1s;
