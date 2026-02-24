@@ -136,7 +136,7 @@
             <ul>
               <li>Visual Studio (Code)</li>
               <li>JetBrain Rider</li>
-              <li>Git & GitHub & GitLab</li>
+              <li>Git & GitHub & GitLab & Azure DevOps</li>
               <li>SQL Server</li>
               <li>REST APIs</li>
               <li>Azure</li>
