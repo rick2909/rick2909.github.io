@@ -117,6 +117,8 @@
               <li>.NET MVC</li>
               <li>Entity Framework</li>
               <li>LINQ</li>
+              <li>Azure Functions</li>
+              <li>Clean Architecture</li>
             </ul>
           </div>
           <div class="skill-category">
@@ -140,6 +142,7 @@
               <li>SQL Server</li>
               <li>REST APIs</li>
               <li>Azure</li>
+              <li>Azure Service Bus</li>
               <li>Docker</li>
               <li>GitHub Copilot & Windsurf</li>
             </ul>
