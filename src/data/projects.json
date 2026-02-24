@@ -3,7 +3,32 @@
     {
       "title": "SoMedia",
       "description": "Developed a LinkedIn-style web application within a multidisciplinary Scrum team. Responsible for setting up RESTful APIs, implementing business logic, and handling database interactions using Entity Framework and LINQ.",
-      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum"],
+      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum", "Git", "GitHub", "Azure"],
+      "github": null,
+      "demo": null,
+      "download": null
+    }
+    ,
+    {
+      "title": "Budget Tracker (.NET)",
+      "description": "A personal finance management app built with ASP.NET Core and Entity Framework. Features include expense tracking, budget planning, and data visualization. Developed with a focus on clean architecture and modern .NET practices.",
+      "technologies": ["C#", ".NET Core 9", "Entity Framework", "LINQ", "SQL Server", "MVC", "Finance"],
+      "github": "https://github.com/rick2909/Budget-Tracker-.NET",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "FlightTracker",
+      "description": "A comprehensive flight tracking application built with Clean Architecture principles. Features domain entities for flights and airports, external API integrations (OpenSky, Aviationstack), and a foundation for real-time flight data processing with planned Blazor Web UI.",
+      "technologies": ["C#", ".NET Core 10", "Entity Framework Core", "Clean Architecture", "SQLite", "External APIs", "Blazor", "SignalR"],
+      "github": "https://github.com/rick2909/FlightTracker",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "NetSuite ERP Integration System",
+      "description": "Developed and improved multiple integration flows for KruitBosch's strategic ERP migration from AX to NetSuite. Built cloud-native Azure Functions in C# to transform incoming order data from CSV files into standardized NetSuite format, implementing comprehensive validation rules, error handling, and logging. Designed robust processing for high-volume orders using Azure Service Bus. Integrated external logistics partner systems for shipment processing and status synchronization, ensuring reliable data exchange between KruitBosch and logistics providers. Contributed to architectural improvements and stability enhancements of the integration layer using a scalable adapter-based architecture.",
+      "technologies": ["C#", ".NET Core 9", "Azure Functions", "Azure Service Bus", "NetSuite", "ERP Integration", "CSV Processing", "Cloud Architecture", "Logging", "Data Validation", "Azure DevOps"],
       "github": null,
       "demo": null,
       "download": null
