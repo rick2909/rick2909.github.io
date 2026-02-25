@@ -29,7 +29,7 @@
 - [x] Settup Skills and Technolgies I know and have use(d)
 - [x] Improve footer. Making it smaller
 - [x] Add certificates part
-- [ ] Add Eductaion followed
+- [x] Add Eductaion followed
 - [ ] Add dutch langauge option
 
 ## Progress
