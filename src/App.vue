@@ -148,6 +148,17 @@
             </ul>
           </div>
         </div>
+
+        <!-- Certifications -->
+        <h3 class="section-title">Certifications</h3>
+        <div class="projects-grid">
+          <CertificationCard
+            v-for="certification in certifications"
+            :key="certification.title"
+            :certification="certification"
+            class="animate-on-scroll"
+          />
+        </div>
       </div>
     </section>
 
@@ -174,12 +185,14 @@
 
 <script>
 import ProjectCard from './components/ProjectCard.vue'
+import CertificationCard from './components/CertificationCard.vue'
 import { usePortfolio } from './composables/usePortfolio.js'
 
 export default {
   name: 'App',
   components: {
-    ProjectCard
+    ProjectCard,
+    CertificationCard
   },
   setup() {
     const portfolio = usePortfolio()

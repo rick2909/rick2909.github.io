@@ -28,7 +28,7 @@
 - [x] Add typewriter animation effect to header text
 - [x] Settup Skills and Technolgies I know and have use(d)
 - [x] Improve footer. Making it smaller
-- [ ] Add certificates part
+- [x] Add certificates part
 - [ ] Add Eductaion followed
 - [ ] Add dutch langauge option
 

@@ -320,33 +320,31 @@ body {
 }
 
 // Projects Grid
-.projects-section {
-  .section-title {
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-semibold;
-    text-align: center;
-    margin: $spacing-3xl 0 $spacing-2xl;
-    color: $secondary-text;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-lg;
-    
+.section-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  margin: $spacing-3xl 0 $spacing-2xl;
+  color: $secondary-text;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-lg;
+  
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    max-width: 100px;
+    height: 1px;
+    background: $border-color;
+  }
+  
+  @include mobile {
     &::before,
     &::after {
-      content: '';
-      flex: 1;
-      max-width: 100px;
-      height: 1px;
-      background: $border-color;
-    }
-    
-    @include mobile {
-      &::before,
-      &::after {
-        max-width: 50px;
-      }
+      max-width: 50px;
     }
   }
 }

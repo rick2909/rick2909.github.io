@@ -1,10 +1,12 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import projectsData from '../data/projects.json'
+import certificationsData from '../data/certifications.json'
 
 export function usePortfolio() {
   // Data properties
   const csharpProjects = ref(projectsData.csharp)
   const unityProjects = ref(projectsData.unity)
+  const certifications = ref(certificationsData)
   const isScrolled = ref(false)
   const activeSection = ref('about')
   const useTypewriter = ref(true)
@@ -145,6 +147,7 @@ export function usePortfolio() {
   return {
     csharpProjects,
     unityProjects,
+    certifications,
     isScrolled,
     activeSection,
     useTypewriter,
