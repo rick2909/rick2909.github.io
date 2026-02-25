@@ -34,6 +34,10 @@
             <i class="fas fa-user"></i>
             <span class="nav-text">About</span>
           </a></li>
+          <li><a href="#education" @click="scrollTo('education')" :class="{ active: activeSection === 'education' }">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-text">Education</span>
+          </a></li>
           <li><a href="#projects" @click="scrollTo('projects')" :class="{ active: activeSection === 'projects' }">
             <i class="fas fa-code"></i>
             <span class="nav-text">Projects</span>
@@ -70,6 +74,21 @@
             you'll find me gaming, watching movies in the cinema, or exploring new technologies. I'm also passionate about aviation and skiing, 
             bringing that same curiosity and energy to every project I work on.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section projects-section">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="projects-grid">
+          <EducationCard
+            v-for="education in educationItems"
+            :key="education.title"
+            :education="education"
+            class="animate-on-scroll"
+          />
         </div>
       </div>
     </section>
@@ -186,13 +205,15 @@
 <script>
 import ProjectCard from './components/ProjectCard.vue'
 import CertificationCard from './components/CertificationCard.vue'
+import EducationCard from './components/EducationCard.vue'
 import { usePortfolio } from './composables/usePortfolio.js'
 
 export default {
   name: 'App',
   components: {
     ProjectCard,
-    CertificationCard
+    CertificationCard,
+    EducationCard
   },
   setup() {
     const portfolio = usePortfolio()

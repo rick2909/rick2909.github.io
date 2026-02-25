@@ -364,6 +364,14 @@ body {
   }
 }
 
+/* Force regular grid layout for education section so cards line up left-to-right */
+#education .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+  margin-top: $spacing-xl;
+}
+
 .project-card {
   @include card-base;
   @include hover-lift;

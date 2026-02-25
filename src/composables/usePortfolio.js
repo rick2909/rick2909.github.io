@@ -1,12 +1,14 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import projectsData from '../data/projects.json'
 import certificationsData from '../data/certifications.json'
+import educationData from '../data/education.json'
 
 export function usePortfolio() {
   // Data properties
   const csharpProjects = ref(projectsData.csharp)
   const unityProjects = ref(projectsData.unity)
   const certifications = ref(certificationsData)
+  const educationItems = ref(educationData)
   const isScrolled = ref(false)
   const activeSection = ref('about')
   const useTypewriter = ref(true)
@@ -37,7 +39,7 @@ export function usePortfolio() {
   }
 
   const updateActiveSection = () => {
-    const sections = ['about', 'projects', 'skills', 'contact']
+    const sections = ['about', 'education', 'projects', 'skills', 'contact']
     const scrollPosition = window.scrollY + 200
 
     for (const section of sections) {
@@ -148,6 +150,7 @@ export function usePortfolio() {
     csharpProjects,
     unityProjects,
     certifications,
+    educationItems,
     isScrolled,
     activeSection,
     useTypewriter,
