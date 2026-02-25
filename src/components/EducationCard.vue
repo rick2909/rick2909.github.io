@@ -33,11 +33,11 @@
     <div class="education-dates">
       <div class="date-item">
         <i class="fas fa-calendar-alt"></i>
-        <span>Start: {{ formatDate(education.startDate) }}</span>
+        <span>Started: {{ formatDate(education.startDate) }}</span>
       </div>
       <div v-if="hasEndDate" class="date-item">
         <i class="fas fa-hourglass-end"></i>
-        <span>End: {{ formatDate(education.endDate) }}</span>
+        <span>Graduated: {{ formatDate(education.endDate) }}</span>
       </div>
     </div>
   </div>

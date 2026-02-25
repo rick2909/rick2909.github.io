@@ -34,7 +34,7 @@
       </div>
       <div v-if="hasEndDate" class="date-item">
         <i class="fas fa-hourglass-end"></i>
-        <span>Ends: {{ formatDate(certification.endDate) }}</span>
+        <span>Expires: {{ formatDate(certification.endDate) }}</span>
       </div>
     </div>
   </div>
