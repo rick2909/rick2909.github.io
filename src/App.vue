@@ -175,7 +175,7 @@ export default {
   },
   setup() {
     const portfolio = usePortfolio()
-    
+
     return {
       ...portfolio
     }

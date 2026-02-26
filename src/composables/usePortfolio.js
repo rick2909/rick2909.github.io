@@ -242,7 +242,7 @@ export function usePortfolio() {
       typeText(fullName.value, displayedName, 50, () => {
         nameTypingComplete.value = true
         // Add class to nameElement ref in the component
-        
+
         // Start typing subtitle after name is complete
         setTimeout(() => {
           typeText(fullSubtitle.value, displayedSubtitle, 40, () => {
@@ -291,7 +291,7 @@ export function usePortfolio() {
       nameTypingComplete.value = true
       subtitleTypingComplete.value = true
     }
-    
+
     // Setup intersection observer after a delay to ensure DOM is ready
     setTimeout(() => {
       setupIntersectionObserver()

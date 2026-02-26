@@ -6,5 +6,5 @@ import './styles/main.scss'
 initLocaleSync()
 
 createApp(App)
-	.use(i18n)
-	.mount('#app')
+  .use(i18n)
+  .mount('#app')
