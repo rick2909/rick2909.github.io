@@ -1,0 +1,72 @@
+{
+  "csharp": [
+    {
+      "title": "SoMedia",
+      "description": "Ontwikkelde een LinkedIn-achtige webapplicatie binnen een multidisciplinair Scrum-team. Verantwoordelijk voor het opzetten van RESTful API's, implementeren van businesslogica en afhandelen van database-interacties met Entity Framework en LINQ.",
+      "technologies": ["C#", "ASP.NET Core", "Entity Framework", "LINQ", "SQL Server", "Scrum", "Git", "GitHub", "Azure"],
+      "github": null,
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "Budget Tracker (.NET)",
+      "description": "Een app voor persoonlijk financieel beheer, gebouwd met ASP.NET Core en Entity Framework. Functionaliteiten zijn onder andere uitgaven bijhouden, budgetplanning en datavisualisatie. Ontwikkeld met focus op clean architecture en moderne .NET-praktijken.",
+      "technologies": ["C#", ".NET Core 9", "Entity Framework", "LINQ", "SQL Server", "MVC", "Finance"],
+      "github": "https://github.com/rick2909/Budget-Tracker-.NET",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "FlightTracker",
+      "description": "Een uitgebreide flight-tracking applicatie gebouwd volgens Clean Architecture-principes. Bevat domein-entiteiten voor vluchten en luchthavens, integraties met externe API's (OpenSky, Aviationstack) en een basis voor real-time verwerking van vluchtdata met geplande Blazor Web UI.",
+      "technologies": ["C#", ".NET Core 10", "Entity Framework Core", "Clean Architecture", "SQLite", "External APIs", "Blazor", "SignalR"],
+      "github": "https://github.com/rick2909/FlightTracker",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "NetSuite ERP Integration System",
+      "description": "Ontwikkelde en verbeterde meerdere integratiestromen voor KruitBosch tijdens de strategische ERP-migratie van AX naar NetSuite. Bouwde cloud-native Azure Functions in C# om binnenkomende orderdata uit CSV-bestanden te transformeren naar een gestandaardiseerd NetSuite-formaat, inclusief uitgebreide validatieregels, foutafhandeling en logging. Ontwierp robuuste verwerking voor grote ordervolumes met Azure Service Bus. Integreerde systemen van externe logistieke partners voor verzendverwerking en statussynchronisatie, zodat betrouwbare data-uitwisseling tussen KruitBosch en logistieke providers mogelijk werd. Droeg bij aan architectuurverbeteringen en stabiliteitsverhoging van de integratielaag met een schaalbare adapter-architectuur.",
+      "technologies": ["C#", ".NET Core 9", "Azure Functions", "Azure Service Bus", "NetSuite", "ERP Integration", "CSV Processing", "Cloud Architecture", "Logging", "Data Validation", "Azure DevOps"],
+      "github": null,
+      "demo": null,
+      "download": null
+    }
+  ],
+  "unity": [
+    {
+      "title": "Simple VR Flight sim",
+      "description": "Een vereenvoudigde flightsimulator gebouwd in Unity voor ING-evenementen. Inclusief een gedeeltelijke reconstructie van de Bijlmer en volledige documentatie via een Game Design Document.",
+      "technologies": ["Unity", "C#", "VR", "Git", "GitHub", "Game Design", "Bijlmer environment"],
+      "github": "https://github.com/rick2909/ING-Air-racing",
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "VR Communication Training for Pilots",
+      "description": "Een VR-trainingsapplicatie voor piloten op de Meta Quest ter vervanging van een desktopversie. Inclusief 3D-personages met emotionele expressies en een virtuele cabine met responsieve passagiers. Photon gebruikt voor multiplayer-interactie en geoptimaliseerd voor prestaties.",
+      "technologies": ["Unity", "C#", "VR", "Photon", "Git", "GitHub", "3D Characters", "Meta Quest"],
+      "github": null,
+      "demo": null,
+      "download": null
+    },
+    {
+      "title": "VR Type Training Embraer E-jets",
+      "description": "Ontwikkelde een 3D-personage met inverse kinematics voor een VR-applicatie die piloten helpt bij de voorbereiding op type training. Werkte in meerdere Scrum-sprints en leverde een configureerbaar model dat cockpitknoppen nauwkeurig kon bedienen.",
+      "technologies": ["Unity", "C#", "VR", "Inverse Kinematics", "Scrum", "Git"],
+      "github": null,
+      "demo": null,
+      "download": null
+    }
+  ],
+  "laravel": [
+    {
+      "title": "POS4 Kassasoftware Web Interface",
+      "description": "Tijdens een stage zelfstandig een complete webinterface ontwikkeld met Laravel, inclusief database-opzet via migrations en geautomatiseerd testen met Laravel Dusk.",
+      "technologies": ["Laravel", "PHP", "JavaScript", "Node.js", "Git", "GitHub", "Laravel Dusk"],
+      "github": null,
+      "demo": null,
+      "download": null
+    }
+  ]
+}

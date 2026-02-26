@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Rick2909 - C# & Unity Developer Portfolio"
+  },
+  "language": {
+    "label": "Language",
+    "english": "EN",
+    "dutch": "NL"
+  },
+  "header": {
+    "fullName": "Rick van Nieuwland",
+    "subtitle": "C# & Unity Developer",
+    "description": "Crafting robust applications and immersive gaming experiences with passion for clean code and innovative solutions.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm an enthusiastic C# developer with a keen eye for detail and a passion for building smart, scalable solutions. Programming feels like solving a well-crafted puzzle to me. I dive into problems, discover patterns, and build something elegant and functional step by step.",
+    "paragraph2": "With my analytical mindset, creative approach, and team spirit, I bring value to every development team. I build robust web applications with .NET and create engaging experiences in Unity, always focusing on clean, readable code and clear documentation.",
+    "paragraph3": "Beyond coding, I'm a lifelong learner who stays current through courses and conferences. When I'm not developing, you'll find me gaming, watching movies in the cinema, or exploring new technologies. I'm also passionate about aviation and skiing, bringing that same curiosity and energy to every project I work on."
+  },
+  "education": {
+    "title": "Education"
+  },
+  "projects": {
+    "title": "My Projects",
+    "csharpTitle": "C# & .NET Projects",
+    "unityTitle": "Unity Projects"
+  },
+  "skills": {
+    "title": "Skills & Technologies"
+  },
+  "certifications": {
+    "title": "Certifications"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "copyright": "© {year} {name}. All rights reserved."
+  },
+  "projectCard": {
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "download": "Download"
+  },
+  "educationCard": {
+    "started": "Started",
+    "graduated": "Graduated"
+  },
+  "certificationCard": {
+    "received": "Received",
+    "expires": "Expires"
+  },
+  "shared": {
+    "na": "N/A"
+  }
+}

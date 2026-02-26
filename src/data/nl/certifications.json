@@ -2,7 +2,7 @@
   {
     "title": "Professional Scrum Master I (PSM I)",
     "issuer": "Scrum.org",
-    "description": "Certified understanding of Scrum framework principles, accountabilities, events, and artifacts to support effective Agile delivery.",
+    "description": "Gecertificeerd begrip van Scrum-principes, accountabilities, events en artifacts ter ondersteuning van effectieve Agile-delivery.",
     "iconUrl": "https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2022-09/asset_44psmi_0.png",
     "skills": ["Scrum", "Agile", "Team Facilitation", "Continuous Improvement"],
     "receivedDate": "2025-06-19",
@@ -11,7 +11,7 @@
   {
     "title": "GitHub Foundations (GH-900)",
     "issuer": "GitHub",
-    "description": "Demonstrated foundational understanding of GitHub, including repositories, collaboration workflows, and GitHub platform capabilities.",
+    "description": "Aangetoonde basiskennis van GitHub, inclusief repositories, samenwerkingsworkflows en platformmogelijkheden.",
     "iconUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/github-foundations.svg",
     "skills": ["GitHub", "Version Control", "Pull Requests", "Collaboration"],
     "receivedDate": "2025-07-17",
@@ -20,7 +20,7 @@
   {
     "title": "Microsoft Certified: Azure Fundamentals (AZ-900)",
     "issuer": "Microsoft",
-    "description": "Validated foundational knowledge of cloud concepts and Microsoft Azure services, workloads, security, and governance.",
+    "description": "Bevestigde basiskennis van cloudconcepten en Microsoft Azure-services, workloads, security en governance.",
     "iconUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
     "skills": ["Azure", "Cloud Concepts", "Azure Services", "Security", "Governance"],
     "receivedDate": "2025-06-25",
@@ -29,7 +29,7 @@
   {
     "title": "GitHub Actions (GH-200)",
     "issuer": "GitHub",
-    "description": "Validated practical CI/CD automation skills using GitHub Actions workflows, runners, and deployment pipelines.",
+    "description": "Aangetoonde praktische CI/CD-automatiseringsvaardigheden met GitHub Actions workflows, runners en deployment pipelines.",
     "iconUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/github-actions.svg",
     "skills": ["GitHub Actions", "CI/CD", "Workflow Automation", "DevOps"],
     "receivedDate": "2025-07-29",

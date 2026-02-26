@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Rick2909 - Portfolio C# & Unity Ontwikkelaar"
+  },
+  "language": {
+    "label": "Taal",
+    "english": "EN",
+    "dutch": "NL"
+  },
+  "header": {
+    "fullName": "Rick van Nieuwland",
+    "subtitle": "C# & Unity Ontwikkelaar",
+    "description": "Ik bouw robuuste applicaties en meeslepende game-ervaringen, met een sterke focus op schone code en innovatieve oplossingen.",
+    "viewWork": "Bekijk mijn werk",
+    "getInTouch": "Neem contact op"
+  },
+  "nav": {
+    "about": "Over mij",
+    "education": "Opleiding",
+    "projects": "Projecten",
+    "skills": "Vaardigheden",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Over mij",
+    "paragraph1": "Ik ben een enthousiaste C#-ontwikkelaar met oog voor detail en een passie voor slimme, schaalbare oplossingen. Programmeren voelt voor mij als het oplossen van een goed ontworpen puzzel. Ik duik in problemen, ontdek patronen en bouw stap voor stap iets elegants en functioneels.",
+    "paragraph2": "Met mijn analytische mindset, creatieve aanpak en teamspirit lever ik waarde in elk ontwikkelteam. Ik bouw robuuste webapplicaties met .NET en creëer boeiende ervaringen in Unity, altijd met focus op schone, leesbare code en heldere documentatie.",
+    "paragraph3": "Naast coderen ben ik een levenslange leerling die up-to-date blijft via cursussen en conferenties. Als ik niet aan het ontwikkelen ben, ben ik vaak aan het gamen, in de bioscoop of nieuwe technologieën aan het verkennen. Ook heb ik veel interesse in luchtvaart en skiën, en diezelfde nieuwsgierigheid en energie neem ik mee in elk project."
+  },
+  "education": {
+    "title": "Opleiding"
+  },
+  "projects": {
+    "title": "Mijn projecten",
+    "csharpTitle": "C# & .NET Projecten",
+    "unityTitle": "Unity Projecten"
+  },
+  "skills": {
+    "title": "Vaardigheden & Technologieën"
+  },
+  "certifications": {
+    "title": "Certificeringen"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "copyright": "© {year} {name}. Alle rechten voorbehouden."
+  },
+  "projectCard": {
+    "viewCode": "Bekijk code",
+    "liveDemo": "Live demo",
+    "download": "Download"
+  },
+  "educationCard": {
+    "started": "Gestart",
+    "graduated": "Afgerond"
+  },
+  "certificationCard": {
+    "received": "Behaald",
+    "expires": "Verloopt"
+  },
+  "shared": {
+    "na": "N.v.t."
+  }
+}

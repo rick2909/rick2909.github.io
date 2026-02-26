@@ -205,6 +205,49 @@ body {
     @include glass-effect;
     padding: $spacing-md 0;
   }
+
+  .nav-content {
+    position: relative;
+  }
+
+  .language-switch {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    border: 1px solid $border-color;
+    border-radius: $radius-full;
+    overflow: hidden;
+    background: rgba($secondary-bg, 0.8);
+
+    @include mobile {
+      position: static;
+      transform: none;
+      margin: $spacing-md auto 0;
+      width: fit-content;
+    }
+
+    .language-option {
+      border: none;
+      background: transparent;
+      color: $secondary-text;
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        color: $accent-color;
+      }
+
+      &.active {
+        color: $primary-bg;
+        background: $accent-color;
+      }
+    }
+  }
   
   ul {
     list-style: none;

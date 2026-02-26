@@ -33,11 +33,11 @@
     <div class="education-dates">
       <div class="date-item">
         <i class="fas fa-calendar-alt"></i>
-        <span>Started: {{ formatDate(education.startDate) }}</span>
+        <span>{{ $t('common.educationCard.started') }}: {{ formatDate(education.startDate) }}</span>
       </div>
       <div v-if="hasEndDate" class="date-item">
         <i class="fas fa-hourglass-end"></i>
-        <span>Graduated: {{ formatDate(education.endDate) }}</span>
+        <span>{{ $t('common.educationCard.graduated') }}: {{ formatDate(education.endDate) }}</span>
       </div>
     </div>
   </div>
@@ -50,6 +50,10 @@ export default {
     education: {
       type: Object,
       required: true
+    },
+    locale: {
+      type: String,
+      default: 'en'
     }
   },
   computed: {
@@ -60,7 +64,7 @@ export default {
   methods: {
     formatDate(value) {
       if (!value) {
-        return 'N/A'
+        return this.$t('common.shared.na')
       }
 
       const date = new Date(value)
@@ -68,7 +72,7 @@ export default {
         return value
       }
 
-      return date.toLocaleDateString('en-GB', {
+      return date.toLocaleDateString(this.locale, {
         year: 'numeric',
         month: 'short',
         day: 'numeric'

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "HBO ICT Software Engineering (Afstudeerrichting Game Development)",
+    "institution": "De Haagse Hogeschool",
+    "description": "HBO-opleiding software engineering met afstudeerspecialisatie in game development.",
+    "location": "Bleiswijkseweg 37E, 2712 PB Zoetermeer, Nederland",
+    "skills": [".NET", ".NET C#", "Android", "Blender", "C#", "Java", "Microsoft Entity Framework", "MySQL", "Scrum", "Sass", "Unity"],
+    "startDate": "2019-09-01",
+    "endDate": "2024-11-01"
+  },
+  {
+    "title": "Applicatie- en Mediaontwikkelaar",
+    "institution": "Grafisch Lyceum Rotterdam",
+    "description": "Opleiding voor applicatie- en mediaontwikkeling.",
+    "location": "Heer Bokelweg 255, 3032 AD Rotterdam, Nederland",
+    "skills": [".NET C#", "CSS", "HTML", "JavaScript", "Microsoft Visual Studio", "MySQL", "Node.js", "PHP", "PhpMyAdmin", "Unity"],
+    "startDate": "2015-09-01",
+    "endDate": "2018-06-01"
+  }
+]

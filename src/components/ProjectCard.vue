@@ -29,7 +29,7 @@
         @mouseenter="playHoverSound"
       >
         <i class="fab fa-github"></i>
-        <span>View Code</span>
+        <span>{{ $t('common.projectCard.viewCode') }}</span>
       </a>
       <a
         v-if="project.demo"
@@ -39,7 +39,7 @@
         @mouseenter="playHoverSound"
       >
         <i class="fas fa-external-link-alt"></i>
-        <span>Live Demo</span>
+        <span>{{ $t('common.projectCard.liveDemo') }}</span>
       </a>
       <a
         v-if="project.download"
@@ -49,7 +49,7 @@
         @mouseenter="playHoverSound"
       >
         <i class="fas fa-download"></i>
-        <span>Download</span>
+        <span>{{ $t('common.projectCard.download') }}</span>
       </a>
     </div>
   </div>

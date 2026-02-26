@@ -30,7 +30,7 @@
 - [x] Improve footer. Making it smaller
 - [x] Add certificates part
 - [x] Add Eductaion followed
-- [ ] Add dutch langauge option
+- [x] Add dutch language option
 
 ## Progress
 - ✅ Created complete Vue.js project structure with Vite
@@ -50,6 +50,10 @@
 - ✅ Enhanced ProjectCard component with icons and improved interactions
 - ✅ Implemented sticky navigation with scroll effects and active states
 - ✅ Added typewriter animation effect to header text with blinking cursor
+- ✅ Implemented EN/NL localization with browser detection and manual language toggle
+- ✅ Added locale-aware URL query support (`?lang=en|nl`) with localStorage persistence
+- ✅ Split portfolio content into locale-specific datasets for projects, education, and certifications
+- ✅ Added translation documentation and self-serve workflow in README
 
 ## Current Goal
 Ready for final customization and deployment

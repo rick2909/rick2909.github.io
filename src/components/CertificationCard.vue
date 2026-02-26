@@ -30,11 +30,11 @@
     <div class="certification-dates">
       <div class="date-item">
         <i class="fas fa-calendar-check"></i>
-        <span>Received: {{ formatDate(certification.receivedDate) }}</span>
+        <span>{{ $t('common.certificationCard.received') }}: {{ formatDate(certification.receivedDate) }}</span>
       </div>
       <div v-if="hasEndDate" class="date-item">
         <i class="fas fa-hourglass-end"></i>
-        <span>Expires: {{ formatDate(certification.endDate) }}</span>
+        <span>{{ $t('common.certificationCard.expires') }}: {{ formatDate(certification.endDate) }}</span>
       </div>
     </div>
   </div>
@@ -47,6 +47,10 @@ export default {
     certification: {
       type: Object,
       required: true
+    },
+    locale: {
+      type: String,
+      default: 'en'
     }
   },
   computed: {
@@ -57,7 +61,7 @@ export default {
   methods: {
     formatDate(value) {
       if (!value) {
-        return 'N/A'
+        return this.$t('common.shared.na')
       }
 
       const date = new Date(value)
@@ -65,7 +69,7 @@ export default {
         return value
       }
 
-      return date.toLocaleDateString('en-GB', {
+      return date.toLocaleDateString(this.locale, {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
